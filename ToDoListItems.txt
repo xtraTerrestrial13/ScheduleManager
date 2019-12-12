@@ -1,0 +1,5 @@
+Mail Birthday Card	Buy a 21st Birthday Card for Sister	29-11-2019	
+Doctor's Appointment	Visit your ophthalmologist 	24-11-2019	
+Finish Tutorial	Complete Tutorial for Java FX	21-11-2019	
+Spring MVC	Start Spring tutorial by 23th	24-11-2019	
+DB basics	Learn DB basics by 23th	23-11-2019	

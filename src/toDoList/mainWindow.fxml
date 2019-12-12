@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toDoList.Controller">
+
+    <left>
+        <ListView fx:id="toDoListView" onKeyPressed="#handleKeyPressed">
+
+        </ListView>
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: white">
+
+            <TextArea fx:id="textArea1" editable="false" prefHeight="284.0" prefWidth="478.0" wrapText="true" VBox.vgrow="ALWAYS" />
+
+            <HBox prefHeight="0.0" prefWidth="385.0">
+                <Label style="-fx-background-color: white" text="Due: ">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+
+                <Label fx:id="label1" style="-fx-background-color: white">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+            </HBox>
+
+        </VBox>
+    </center>
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#showDialog" text="New Note" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#handleExit" text="Exit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+
+
+            <ToolBar>
+                <HBox spacing="10.0">
+                    <Button onAction="#showDialog">
+                        <tooltip>
+                            <Tooltip text="New Note" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/New24.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button onAction="#saveFile">
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/Save24.gif" />
+                            </ImageView>
+                        </graphic>
+                        <tooltip>
+                            <Tooltip text="Save File" />
+                        </tooltip>
+                    </Button>
+
+                    <Button onAction="#openFile" prefHeight="30.0" prefWidth="40.0">
+                        <tooltip>
+                            <Tooltip text="Open File" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/Open24.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ToggleButton fx:id="filterToggleButton" onAction="#handleFilterButton" prefHeight="25.0" prefWidth="125.0" text="Today's Schedule">
+                        <tooltip>
+                            <Tooltip text="Button Down: Show Today's Item only. Button Up: Show all Items" />
+                        </tooltip>
+                    </ToggleButton>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+
+</BorderPane>
